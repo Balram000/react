@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Card from './component/Card.jsx'
-import User from './component/User.jsx'
+
 
 const App = () => {
 
