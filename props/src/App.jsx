@@ -1,6 +1,6 @@
 
-import React from 'react'
 import Card from './component/Card.jsx'
+import ErrorBoundary from './component/ErrorBoundary.jsx'
 
 
 const App = () => {
@@ -121,14 +121,14 @@ const App = () => {
     
   return (
     <div className='parent'>
-     
     {jobs.map(function(elem){
-     
-      
-      return  <Card company={elem.company}  posted={elem.posted}  logo ={elem.logo} title={elem.title}
-         type={elem.type} level={elem.level} pay ={elem.pay} location ={elem.location}/>
+      return (
+        <ErrorBoundary key={elem.id}>
+          <Card company={elem.company}  posted={elem.posted}  logo ={elem.logo} title={elem.title}
+            type={elem.type} level={elem.level} pay ={elem.pay} location ={elem.location}/>
+        </ErrorBoundary>
+      )
     })}
-
     </div>
   )
 }

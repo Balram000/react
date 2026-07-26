@@ -2,8 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
+const rootElement = document.getElementById('root')
 
+if (!rootElement) {
+  throw new Error('Unable to mount the app: no element with id "root" was found in index.html')
+}
+
+createRoot(rootElement).render(
+  <StrictMode>
     <App />
-  
+  </StrictMode>,
 )
