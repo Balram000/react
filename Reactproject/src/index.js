@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
+const rootElement = document.getElementById('root');
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+if (!rootElement) {
+  throw new Error('Unable to mount the app: no element with id "root" was found in index.html');
+}
+
+const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-
-
