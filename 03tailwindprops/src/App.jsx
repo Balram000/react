@@ -1,11 +1,12 @@
 import React from 'react'
-
+import Newside from './component/Newside'
 const App = () => {
   return (
-    <div  className='text-red-500 m-12 bg-green-300'>
-    
+    <div>
+      <Newside/>
     </div>
   )
 }
 
 export default App
+
