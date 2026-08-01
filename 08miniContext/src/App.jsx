@@ -11,7 +11,6 @@ function App() {
     <UserContextProvider>
       <h1>React with Balram </h1>
       <Login />
-      
       <Profile />
     </UserContextProvider>
   )
