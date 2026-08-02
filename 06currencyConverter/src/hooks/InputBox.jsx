@@ -8,7 +8,7 @@ function InputBox({
     onAmountChange,
     onCurrencychange,
     currencyoption = [],
-    setectionCurrency = "usd",
+    selectCurrency = "usd",
     amountDisble = false,
     currencyDisble = false,
     className = "",
@@ -38,7 +38,7 @@ function InputBox({
                 <select
                     className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
                     
-                    value={setectionCurrency}
+                    value={selectCurrency}
                     onChange={(e) =>
                       onCurrencychange && onCurrencychange(e.target.value) }
     
