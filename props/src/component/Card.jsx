@@ -2,10 +2,9 @@ import React from 'react'
 import { Bookmark } from 'lucide-react'
 import './index.css';
 const Card = (props) => {
-  console.log(props);
+//  console.log(props);
   return ( 
-    
-    
+   
     
      <div className="card">
         <div className="top">
